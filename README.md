@@ -5,7 +5,7 @@ On Databricks, specifically speaking, the source code of Spark is **written once
 
 As of the nature of Spark's codebase development, we need to optimize our codebase to be consistent with Spark to obtain a long-term, global readibility and maintainability. 
 
-**A simple code solution is the most effective approach.**
+**A simple code is the most effective solution.**
 
 ## <a name='TOC'>Table of Contents</a>
 - [Databricks-FMG Guide](#databricks-fmg-guide)
@@ -14,6 +14,7 @@ As of the nature of Spark's codebase development, we need to optimize our codeba
   - [Databrircks, Synapse \& GitHub](#databrircks-synapse--github)
   - [Github Repo Setup on Databricks](#github-repo-setup-on-databricks)
   - [Development Guidance on Databricks/GitHub](#development-guidance-on-databricksgithub)
+
    
 ## <a name='history'>Document History</a>
 - 18/03/2024: Initial version.
@@ -29,6 +30,10 @@ GitHub repositories are being used:
     * Protected Branches:
         * master
         * dev-release
+
+**API Reference** for all public PySpark modules, classes, functions and methods:
+- [Spark SQL](https://spark.apache.org/docs/3.1.3/api/python/reference/pyspark.sql.html)
+
 
 ## <a name='setup'>Github Repo Setup on Databricks</a>
 
