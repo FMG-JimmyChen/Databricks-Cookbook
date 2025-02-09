@@ -1,9 +1,9 @@
 # Databricks-FMG Guide 
-This guide draws from the experience coaching and various projects as well as the open source community.
+This guide draws upon experience coaching teams and working on various projects, as well as insights from the open-source community.
 
-On Databricks, specifically speaking, the source code of Spark is **written once**  by its author, but **read and modified multiple times** by lots of engineers which the future modification of the code may subsequently come with bugs.
+Regarding Databricks, and Spark in particular, the source code is **written once**  by its author but **read and modified multiple times** by numerous engineers. Subsequent modifications can introduce bugs.
 
-As of the nature of Spark's codebase development, we need to optimize our codebase to be consistent with Spark to obtain a long-term, global readibility and maintainability. 
+Given the nature of Spark's codebase development, we must optimize our own codebase for consistency with Spark's style. This ensures long-term, global readability and maintainability.
 
 **A simple code is the most effective solution.**
 
@@ -32,7 +32,7 @@ GitHub repositories are being used:
         * dev-release
 
 **API Reference** for all public PySpark modules, classes, functions and methods:
-- [Spark SQL](https://spark.apache.org/docs/3.1.3/api/python/reference/pyspark.sql.html)
+- [Spark SQL](https://spark.apache.org/docs/latest/api/python/reference/index.html)
 
 
 ## <a name='setup'>Github Repo Setup on Databricks</a>
@@ -46,13 +46,13 @@ Gitbub practice that FMG follows:
 - [Git& GitHub Best Practice](https://farmersmutualgroup.atlassian.net/wiki/spaces/BIS/pages/6750294/Git+GitHub+Best+Practice)
 - [Current methodology: GitHub flow](https://farmersmutualgroup.atlassian.net/wiki/x/VYAKVg)
 
-The Databricks flow we adopted for delivering solution differs a little bit from FMG’s internal guidelines.
+The Databricks workflow we adopted for solution delivery deviates slightly from FMG's internal guidelines.
 
-The key difference inhabits in the use of **dev-release** branch for delivering solution in which all intended changes should be merged before **master**.
+The key difference lies in the use of a **dev-release** branch for solution delivery. All intended changes are merged into this branch before being merged into **master**.
 
-Due to the interaction with repositories between Synapse and Databricks, an additional barrier (**dev-release**) is made made to protect **master** and allow the development to interate quickly as well as the testing so changes can be shared within the development environment.  
+Due to the interaction between the Synapse and Databricks repositories, this additional branch (**dev-release**) serves to protect **master** and facilitate rapid development and testing.  This also enables changes to be shared within the development environment.
 
-Key points to be followed on Databricks:
-1. Always creating branch on the basis of dev-release branch where all intended changes should be merged into before master.
+Key points to be followed on Databricks & Synapse:
+1. For Databricks and Synapse development, we should always create branches based on the **dev-release** branch. All intended changes (whether code or pipeline modifications) should be merged into **dev-release** before being merged into **master**.
 2. 
 3. 
