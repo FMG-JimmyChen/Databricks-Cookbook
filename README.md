@@ -28,9 +28,11 @@ Given the nature of Spark's codebase development, we must optimize our own codeb
 GitHub repositories are being used:
 - [fmgcore/fmg-dataorchestration](https://github.com/fmgcore/fmg-dataorchestration) 
     * Protected Branches:
-        * master
-        * dev-release
-
+        * master: equivalent to the current production code<br>
+          The ***master branch** tracks **dev-release** only 
+        * dev-release: the code in the **dev-release** is deployed to a suitable test environment, tested and any issues are resolved.<br>
+          Once the testing is complete and the release is finalized, **dev-release** is merged into **master** for production.
+ 
 **API Reference** for all public PySpark modules, classes, functions and methods:
 - [Spark SQL](https://spark.apache.org/docs/latest/api/python/reference/index.html)
 
@@ -45,6 +47,7 @@ Gitbub practice that FMG follows:
 - [The FMG Github flow process](https://farmersmutualgroup.atlassian.net/wiki/spaces/BIS/pages/1534328833/The+FMG+Github+flow+process+a+presentation+for+the+uninitiated)
 - [Git& GitHub Best Practice](https://farmersmutualgroup.atlassian.net/wiki/spaces/BIS/pages/6750294/Git+GitHub+Best+Practice)
 - [Current methodology: GitHub flow](https://farmersmutualgroup.atlassian.net/wiki/x/VYAKVg)
+- [Previous methodology: GitFlow](https://farmersmutualgroup.atlassian.net/wiki/spaces/BIS/pages/1443528730/Previous+methodology+GitFlow)
 
 The Databricks workflow we adopted for solution delivery deviates slightly from FMG's internal guidelines.
 
@@ -54,5 +57,5 @@ Due to the interaction between the Synapse and Databricks repositories, this add
 
 Key points to be followed on Databricks & Synapse:
 1. For Databricks and Synapse development, we should always create branches based on the **dev-release** branch. All intended changes (whether code or pipeline modifications) should be merged into **dev-release** before being merged into **master**.
-2. 
+2. Source data files stored in Azure Data Lake are accessible by Databricks because the Data Lake is mounted to dev/prod Databricks (eg. /mnt/structured/CRM/)
 3. 
